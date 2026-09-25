@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SifwakuLab | Gift Sifwaku's Data, AI &amp; Research Lab</title>
+  <meta name="description" content="SifwakuLab is Gift Sifwaku's practical learning lab for data analysis, AI in business, research, digital protection and evidence-based thinking.">
+  <meta name="author" content="Gift Sifwaku">
+  <meta name="keywords" content="SifwakuLab, Sifwaku Gift, Gift Sifwaku, data analysis, AI in business, research, Zambia">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SifwakuLab | Gift Sifwaku's Data, AI &amp; Research Lab">
+  <meta property="og:description" content="Learn data analysis, responsible AI, research and digital protection with Gift Sifwaku.">
+  <meta property="og:image" content="assets/images/profile/profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SifwakuLab | Gift Sifwaku's Data, AI &amp; Research Lab">
+  <meta name="twitter:description" content="A practical learning lab for data, AI, research and digital protection.">
+  <link rel="canonical" href="https://sifwaku-data-ai-lab.vercel.app/">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SifwakuLab",
+      "alternateName": ["Sifwaku Gift", "Gift Sifwaku Data and AI Lab"],
+      "url": "https://sifwaku-data-ai-lab.vercel.app/",
+      "author": {
+        "@type": "Person",
+        "name": "Gift Sifwaku",
+        "url": "https://sifwaku.github.io/gift-sifwaku-portfolio/"
+      },
+      "description": "A practical learning lab for data analysis, responsible AI, research and digital protection."
+    }
+  </script>
+  <style>
+    @media (max-width: 800px) {
+      .health-grid { grid-template-columns: 1fr; }
+      .health-grid article { min-height: 0; }
+      .health-grid h3 { margin-top: 24px; }
+      .health-callout { display: block; }
+      .health-callout b { display: block; margin-bottom: 8px; }
+    }
+  </style>
+</head>
+<body class="homepage">
+  <div class="top-moving-tab" aria-label="Sifwaku announcement banner">
+    <span>Learn data analysis, turn raw information into evidence, understand cyber law, protect your digital life, and build practical skills for research, learning, and better decisions.</span>
+  </div>
+  <header>
+    <a class="brand" href="index.html">SIFWAKU<span>LAB</span></a>
+    <button id="menu" aria-label="Open navigation">☰</button>
+    <nav id="nav"><a href="index.html">Home</a><a href="course.html">The Method</a><a href="course2.html">From Curious to Capable</a><a href="course3.html">Free University Courses</a><a href="course4.html#introduction">Cyber Law &amp; Digital Protection</a><a href="course5.html">AI in Business</a><a href="library.html">Library</a></nav>
+    <a class="header-cta" href="library.html">Start Learning</a>
+  </header>
+  <main>
+    <section class="hero home-hero"> 
+      <div class="hero-copy">
+        <div class="hero-topline">
+          <p class="hero-intro-copy">This website is a learning lab for evidence-based thinking, data skills, digital protection, and practical study. Ask the AI what the site is for, how it helps learners, or how it supports research and cyber law.</p>
+        </div>
+        <h1>Evidence over <i>assumption.</i></h1>
+        <p class="hero-text">Data is our lens, statistics are our compass, and a healthy mind is our foundation. Build with purpose, verify with rigor, and leave open tools for the next person learning.</p>
+        <div class="actions"><a class="button button-dark" href="course.html">Start The Method <span>↘</span></a><a class="button button-dark" href="library.html">Explore Library <span>↗</span></a></div>
+      </div>
+      <div class="hero-side" aria-label="Profile and AI panels">
+        <div class="profile-frame">
+          <img class="profile-photo" src="assets/images/profile/profile.jpg" alt="Gift Sifwaku profile photo" />
+        </div>
+      </div>
+    </section>
+
+    <div class="assistant-showcase" id="assistant-showcase">
+      <button class="ai-launcher" id="ai-launcher" type="button" aria-expanded="false" aria-controls="assistant-panel">Ask the AI</button>
+      <div class="assistant-panel" id="assistant-panel">
+        <div class="assistant-head">
+          <div class="assistant-brand">
+            <div class="bot-head" aria-hidden="true"><span class="eye left"></span><span class="eye right"></span><span class="mouth"></span></div>
+            <div>
+              <p class="eyebrow">SIFWAKU AI</p>
+              <h3>Ask about the website and its value.</h3>
+            </div>
+          </div>
+          <span class="assistant-status">Online</span>
+        </div>
+        <div class="chat-window" id="chat-window" aria-live="polite">
+          <div class="message bot">
+            <strong>Sifwaku AI</strong>
+            <p>This website is a learning lab for evidence-based thinking, data skills, digital protection, and practical study. Ask the AI what the site is for, how it helps learners, or how it supports research and cyber law.</p>
+          </div>
+        </div>
+        <div class="chat-suggestions" aria-label="Suggested questions">
+          <button type="button" class="suggestion-chip" data-question="What is this website for?">What is this website for?</button>
+          <button type="button" class="suggestion-chip" data-question="How do I learn data analysis?">Data analysis</button>
+          <button type="button" class="suggestion-chip" data-question="What is cybersecurity and cyber law?">Cyber law</button>
+        </div>
+        <details class="regression-lab">
+          <summary>Plot a regression graph</summary>
+          <label for="regression-data">Data pairs: x,y</label>
+          <textarea id="regression-data" rows="4" spellcheck="false">1,2
+2,3
+3,5
+4,4
+5,7
+6,8</textarea>
+          <div class="regression-actions">
+            <button type="button" id="plot-regression">Plot graph</button>
+            <button type="button" id="download-regression" disabled>Download PNG</button>
+          </div>
+          <canvas id="regression-chart" width="760" height="360" aria-label="Regression chart"></canvas>
+          <p class="regression-result" id="regression-result" aria-live="polite">Enter paired values to calculate a fitted line.</p>
+        </details>
+        <form class="chat-form" id="chat-form">
+          <input id="chat-input" type="text" placeholder="Ask: what is this website? what are the advantages?" aria-label="Ask Sifwaku AI" />
+          <button type="button" id="voice-toggle" aria-label="Start voice chat" title="Start voice chat">Mic</button>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <section class="manifesto" id="mindset"><p class="eyebrow">THE WORKING MESSAGE</p><p>“The goal is not to sound technical. The goal is to ask better questions, make honest measurements, and turn useful findings into better decisions.”</p><span>— Gift Sifwaku</span></section>
+
+    <section class="closing"><p class="eyebrow">THE FINISH LINE</p><h2>Consistency beats intensity.</h2><p>Let verifiable evidence speak for your capabilities. Keep learning, protect your mental health, and leave the trail clearer than you found it.</p><a class="button button-dark" href="https://sifwaku.github.io/gift-sifwaku-portfolio/" target="_blank" rel="noreferrer">View my Portfolio ↗</a></section>
+  </main>
+  <footer><b>SIFWAKU LAB</b><span>Evidence · Experiments · Analysis · Research</span><small>© 2026 Gift Sifwaku</small></footer>
+  <style>
+    .chat-suggestions{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 12px}.suggestion-chip{padding:7px 10px;border:1px solid rgba(49,89,77,.12);border-radius:999px;background:#f7faf9;color:var(--ink);font:500 .62rem var(--mono);letter-spacing:.04em;cursor:pointer;transition:all .2s ease}.suggestion-chip:hover{border-color:var(--green);color:var(--green)}.message.typing p{position:relative;min-width:140px;background:#edf4f2}.message.typing p:after{content:'';display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 -10px 0 0 rgba(49,89,77,.2),10px 0 0 0 rgba(49,89,77,.2);animation:typingPulse 1s ease-in-out infinite;margin-left:10px}@keyframes typingPulse{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(-2px);opacity:1}}.chat-form #voice-toggle{min-width:44px;padding-inline:9px}.chat-form #voice-toggle.is-listening{background:#b84c3a;color:#fff;border-color:#b84c3a}.message.bot h4{margin:14px 0 6px;color:var(--green);font:600 .82rem/1.25 var(--mono)}.message.bot ul,.message.bot ol{margin:5px 0 10px;padding-left:22px}.message.bot li{margin:4px 0}.message.bot code{padding:2px 5px;background:#edf4f2;color:var(--dark);font:500 .72rem var(--mono)}.message.bot pre.assistant-code-block{margin:10px 0;padding:12px;overflow:auto;background:#182a28;color:#f4f1e8;border-radius:6px;white-space:pre}.message.bot pre.assistant-code-block code{display:block;padding:0;background:transparent;color:inherit;font:500 .68rem/1.6 var(--mono);white-space:pre}.regression-lab{margin:0 14px 14px;padding:10px 12px;border:1px solid rgba(49,89,77,.14);background:#f7faf9}.regression-lab summary{cursor:pointer;color:var(--green);font:600 .68rem var(--mono);letter-spacing:.04em}.regression-lab label{display:block;margin-top:10px;color:var(--muted);font:500 .6rem var(--mono)}.regression-lab textarea{display:block;width:100%;margin-top:5px;padding:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font:500 .68rem/1.5 var(--mono);resize:vertical}.regression-actions{display:flex;gap:7px;margin-top:8px}.regression-actions button{padding:7px 9px;border:1px solid var(--green);background:var(--green);color:#fff;font:500 .6rem var(--mono);cursor:pointer}.regression-actions button:disabled{opacity:.45;cursor:not-allowed}.regression-actions button+button{background:transparent;color:var(--green)}#regression-chart{display:block;width:100%;height:auto;margin-top:10px;background:#fff;border:1px solid var(--line)}.regression-result{min-height:1.4em;margin:7px 0 0;color:var(--muted);font:500 .62rem/1.4 var(--mono);white-space:pre-wrap}
+  </style>
+  <script>
+    window.SIFWAKU_GEMINI_ENDPOINT = window.location.protocol === 'file:'
+      ? 'http://localhost:3000/api/gemini'
+      : '/api/gemini';
+  </script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://sifwaku-data-ai-lab.vercel.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://sifwaku-data-ai-lab.vercel.app/course.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sifwaku-data-ai-lab.vercel.app/course2.html</loc><priority>0.7</priority></url>
+  <url><loc>https://sifwaku-data-ai-lab.vercel.app/course3.html</loc><priority>0.7</priority></url>
+  <url><loc>https://sifwaku-data-ai-lab.vercel.app/course4.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sifwaku-data-ai-lab.vercel.app/course5.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sifwaku-data-ai-lab.vercel.app/library.html</loc><priority>0.8</priority></url>
+</urlset>
