@@ -1,0 +1,15 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="University logo">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#1f4d45"/>
+      <stop offset="100%" stop-color="#0f2f2d"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="26" fill="url(#bg)"/>
+  <rect x="20" y="20" width="140" height="140" rx="22" fill="none" stroke="#e9f0ee" stroke-width="3" opacity="0.8"/>
+  <path d="M40 72 L90 46 L140 72 L90 98 L40 72 Z" fill="#D7B46A" opacity="0.9"/>
+  <path d="M52 78 L90 58 L128 78 V106 C128 117 119 126 108 126 H72 C61 126 52 117 52 106 V78 Z" fill="#F5F2EA"/>
+  <path d="M71 83 H109 V100 H71 Z" fill="#1f4d45" opacity="0.9"/>
+  <path d="M90 102 V128" stroke="#1f4d45" stroke-width="7" stroke-linecap="round"/>
+  <path d="M62 127 H118" stroke="#1f4d45" stroke-width="7" stroke-linecap="round"/>
+</svg>
