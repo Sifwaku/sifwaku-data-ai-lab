@@ -10,4 +10,4 @@ header?.insertBefore(themeToggle,b);
 const updateThemeToggle=()=>{const isDim=root.dataset.theme==='dim';themeToggle.textContent=isDim?'☼':'◐';themeToggle.setAttribute('aria-pressed',String(isDim));};
 updateThemeToggle();
 themeToggle.addEventListener('click',()=>{const isDim=root.dataset.theme==='dim';if(isDim) delete root.dataset.theme;else root.dataset.theme='dim';localStorage.setItem('sifwaku-theme',isDim?'paper':'dim');updateThemeToggle();});
-b?.addEventListener('click',()=>n.classList.toggle('open'));n?.querySelectorAll('a').forEach(x=>x.addEventListener('click',()=>n.classList.remove('open')));
+b?.addEventListener('click',()=>{const open=n.classList.toggle('open');b.setAttribute('aria-expanded',String(open));b.setAttribute('aria-label',open?'Close navigation':'Open navigation');b.textContent=open?'×':'☰';});n?.querySelectorAll('a').forEach(x=>x.addEventListener('click',()=>{n.classList.remove('open');b?.setAttribute('aria-expanded','false');b?.setAttribute('aria-label','Open navigation');b&&(b.textContent='☰');}));
