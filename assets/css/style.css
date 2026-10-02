@@ -144,3 +144,58 @@ a { -webkit-tap-highlight-color: transparent; }
   table { display: block; width: 100%; overflow-x: auto; }
   pre, code { max-width: 100%; overflow-x: auto; }
 }
+
+
+/* ============================================================
+   SIFWAKULAB — LAB HOMEPAGE REDESIGN
+   ============================================================ */
+.homepage .hero-side{position:relative}
+.homepage .lab-status{display:flex;align-items:center;gap:8px;margin-top:12px;padding:10px 12px;border:1px solid var(--line);background:#fff;color:var(--muted);font:500 .62rem var(--mono);letter-spacing:.03em}
+.homepage .lab-status b{color:var(--green);font-size:.58rem;letter-spacing:.08em}
+.homepage .status-dot{width:7px;height:7px;border-radius:50%;background:#28a36a;box-shadow:0 0 0 4px rgba(40,163,106,.12);flex:0 0 7px}
+.homepage .lab-strip{max-width:var(--max);margin:0 auto;padding:0 22px 70px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.homepage .lab-strip>div{min-height:125px;padding:22px;background:#fff;display:flex;flex-direction:column;gap:7px}
+.homepage .lab-strip span{color:var(--ochre);font:500 .62rem var(--mono)}
+.homepage .lab-strip b{font:700 .72rem var(--mono);letter-spacing:.08em;color:var(--green)}
+.homepage .lab-strip small{color:var(--muted);font-size:.72rem;line-height:1.45}
+.homepage .lab-section{padding-top:78px}
+.homepage .lab-grid{display:grid;grid-template-columns:1.35fr .85fr .85fr;gap:14px}
+.homepage .lab-card{min-height:220px;padding:25px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.homepage .lab-card:hover{transform:translateY(-4px);border-color:var(--green);box-shadow:0 16px 28px rgba(18,43,74,.09)}
+.homepage .lab-card-feature{grid-row:span 2;min-height:454px;background:linear-gradient(145deg,#e8f2fa,#fff)}
+.homepage .lab-card-number{color:var(--green);font:500 .61rem var(--mono);letter-spacing:.1em}
+.homepage .lab-card strong{margin-top:48px;max-width:390px;font:600 1.7rem/1.1 var(--serif);color:var(--ink)}
+.homepage .lab-card p{max-width:390px;margin:10px 0 0;color:var(--muted);font-size:.8rem;line-height:1.6}
+.homepage .lab-card-link{margin-top:auto;padding-top:22px;color:var(--green);font:500 .63rem var(--mono);letter-spacing:.05em}
+.homepage .lab-card-feature strong{font-size:2.35rem}
+.homepage .projects-section{padding-top:85px}
+.homepage .workbench{display:grid;grid-template-columns:1.5fr .8fr;border:1px solid var(--line);background:#fff}
+.homepage .workbench-main{padding:36px;min-height:300px;background:#e8f2fa}
+.homepage .workbench-main h3{margin:60px 0 8px;font:600 clamp(2rem,4vw,3.3rem)/1 var(--serif)}
+.homepage .workbench-main p{max-width:600px;color:var(--muted);font-size:.86rem}
+.homepage .workbench-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
+.homepage .workbench-tags span{padding:7px 9px;border:1px solid var(--line);background:#fff;color:var(--green);font:500 .58rem var(--mono)}
+.homepage .workbench-side{display:grid;grid-template-rows:repeat(3,1fr);background:var(--dark);color:#fff}
+.homepage .workbench-side div{padding:24px;border-bottom:1px solid rgba(255,255,255,.15)}
+.homepage .workbench-side div:last-child{border-bottom:0}
+.homepage .workbench-side b{display:block;color:#9bc7ed;font:500 .61rem var(--mono);letter-spacing:.1em;margin-bottom:9px}
+.homepage .workbench-side span{display:block;color:#d8e7f5;font-size:.75rem;line-height:1.5}
+.homepage .health-section{margin-top:0}
+.homepage .closing h2{max-width:800px}
+@media(max-width:820px){
+  .homepage .lab-strip{grid-template-columns:1fr 1fr;padding:0 22px 48px}
+  .homepage .lab-grid{grid-template-columns:1fr 1fr}
+  .homepage .lab-card-feature{grid-column:1 / -1;grid-row:auto;min-height:320px}
+  .homepage .workbench{grid-template-columns:1fr}
+  .homepage .workbench-side{grid-template-columns:1fr;grid-template-rows:auto}
+}
+@media(max-width:480px){
+  .homepage .lab-strip{grid-template-columns:1fr;padding:0 16px 38px}
+  .homepage .lab-strip>div{min-height:100px}
+  .homepage .lab-grid{grid-template-columns:1fr}
+  .homepage .lab-card,.homepage .lab-card-feature{min-height:205px}
+  .homepage .lab-card-feature{grid-column:auto}
+  .homepage .lab-card strong,.homepage .lab-card-feature strong{margin-top:32px;font-size:1.65rem}
+  .homepage .workbench-main{padding:24px}
+  .homepage .workbench-main h3{margin-top:45px}
+}
