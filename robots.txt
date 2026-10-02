@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sifwaku-data-ai-lab.vercel.app/sitemap.xml
+Sitemap: https://sifwaku.github.io/sifwaku-data-ai-lab/sitemap.xml
