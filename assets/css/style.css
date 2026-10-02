@@ -43,3 +43,104 @@ header{gap:24px;min-height:72px}header .brand{flex:0 0 auto;letter-spacing:.14em
 .course-page .course-hero{padding-top:52px;padding-bottom:50px}.course-page .course-overview{margin-bottom:45px;padding-top:42px;padding-bottom:42px}.course-page .course-video-intro{margin-bottom:45px}.course-page .open-notes{margin-bottom:48px;padding-top:38px}.course-page .course-stats{margin-bottom:45px}.course-page .course-shell{margin-bottom:60px}.course-page .lesson-heading{padding-top:25px;padding-bottom:20px}.course-page .lesson-panel{padding-top:25px}.course-page .method-frame{margin-bottom:55px;padding-top:45px;padding-bottom:45px}
 .course-page{--paper:#f6f9fc;--ink:#122b4a;--muted:#5b6f86;--line:#d6e1ed;--green:#075ca8;--ochre:#ef6b4f;--dark:#0b3156;background:var(--paper);color:var(--ink)}.course-page:before{opacity:.12;background-image:radial-gradient(#3372a5 .65px,transparent .65px);background-size:22px 22px}.course-page header{background:rgba(246,249,252,.94);border-color:var(--line)}.course-page .brand span,.course-page .eyebrow,.course-page .tag{color:var(--green)}.course-page .button-dark,.course-page .course-nav-cta{background:var(--green)}.course-page .course-hero-note,.course-page .overview-points span,.course-page .lesson-reading,.course-page .zambia-example,.course-page .practice-card,.course-page .quiz-card,.course-page .reflection-card,.course-page .book-card{background:#fff;border-color:var(--line)}.course-page .course-hero-note{box-shadow:0 16px 35px rgba(18,43,74,.08)}.course-page .note-mark,.course-page .video-play{color:var(--ochre)}.course-page .course-video-frame{background:var(--dark);box-shadow:0 18px 35px rgba(18,43,74,.13)}.course-page .course-video-copy h2,.course-page .overview-heading h2,.course-page .method-frame h2,.course-page .lesson-heading h2{color:var(--ink)}.course-page .course-video-copy h2,.course-page .overview-heading h2,.course-page .method-frame h2{font-family:var(--serif)}.course-page .course-video-copy h2 i,.course-page .overview-heading h2 i,.course-page .method-frame h2 i,.course-page .course-hero h1 i{color:var(--ochre)}.course-page .course-nav-bar,.course-page .course-overview,.course-page .course-stats,.course-page .method-frame{border-color:var(--line)}.course-page .course-nav-brand,.course-page .course-nav-bar a:hover,.course-page .course-meta b,.course-page .resource-row a,.course-page .book-copy a,.course-page .next-button{color:var(--green)}.course-page .progress-track{background:#dfe8f2}.course-page .progress-track span{background:var(--ochre)}.course-page .module-item.selected{background:#e8f1fa}.course-page .module-item.completed,.course-page #lesson-status{color:var(--green)}.course-page .lesson-tab.active{background:var(--green)}.course-page .zambia-example{background:var(--dark);color:#fff;border-color:var(--dark)}.course-page .zambia-example .eyebrow{color:#9bc7ed}.course-page .zambia-example p:not(.eyebrow){color:#d8e7f5}.course-page .book-cover{background:var(--ochre)}.course-page .paper-sheet{background:#fff;box-shadow:0 12px 24px rgba(18,43,74,.12)}.course-page .paper-shadow{background:#c7d7e7}.course-page .paper-rule{border-color:var(--ochre)}.course-page .quiz-option{background:#fff;border-color:var(--line)}.course-page .quiz-option:hover,.course-page .quiz-option.chosen{background:#e8f1fa;border-color:var(--green)}.course-page .feedback.success{color:var(--green)}
 .course-page .course-hero{display:block;max-width:900px;padding-bottom:72px}.course-page .course-hero-copy{max-width:760px}.library-welcome{max-width:var(--max);margin:52px auto 0;padding:0 22px}.library-welcome-copy{display:block;max-width:780px;padding:26px 28px;border:2px solid rgba(7,92,168,.18);border-radius:18px;background:#fff;box-shadow:0 18px 30px rgba(18,43,74,.08);animation:library-fade-up .7s ease both}.library-welcome-copy .eyebrow{display:inline-block;color:var(--green);margin-bottom:10px}.library-welcome-copy h2{margin:12px 0 8px;color:var(--ink);font:600 clamp(2rem,4vw,3.5rem)/1 var(--serif);letter-spacing:-.04em}.library-welcome-copy p:not(.eyebrow){margin:0;max-width:640px;color:var(--muted);font-size:.98rem;line-height:1.6}.homepage .library-section{padding-top:24px}.homepage .library-bento{display:grid;grid-template-columns:1.35fr .9fr .9fr;gap:18px;grid-auto-rows:minmax(220px,auto);animation:library-fade-up .8s ease both;animation-delay:.2s}@keyframes library-fade-up{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+
+
+/* ============================================================
+   SIFWAKULAB — RESPONSIVE SYSTEM
+   Fluid layout for phones, tablets and desktop screens.
+   ============================================================ */
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: border-box; }
+body { min-width: 320px; overflow-x: hidden; }
+img, svg, canvas, video { max-width: 100%; height: auto; }
+button, a, input, textarea, select { touch-action: manipulation; }
+a { -webkit-tap-highlight-color: transparent; }
+
+@media (max-width: 1100px) {
+  header { padding-left: 22px; padding-right: 22px; gap: 16px; }
+  header nav { gap: 14px; }
+  header nav a { font-size: .62rem; }
+  .header-cta { display: none; }
+  .hero { grid-template-columns: minmax(0,1fr) minmax(280px,.75fr); gap: 34px; padding-left: 28px; padding-right: 28px; }
+  .profile-frame, .profile-photo { width: 100%; max-width: 100%; }
+  .profile-frame { height: auto; aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 820px) {
+  header { position: sticky; top: 0; z-index: 100; min-height: 64px; }
+  header .brand { font-size: .84rem; }
+  #menu { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; flex: 0 0 42px; border: 1px solid var(--line); border-radius: 10px; background: transparent; color: var(--ink); cursor: pointer; font-size: 1.2rem; }
+  #theme-toggle { width: 38px; height: 38px; flex: 0 0 38px; }
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    padding: 12px 22px 18px;
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 0 18px 30px rgba(18,43,74,.10);
+  }
+  header nav.open { display: flex; }
+  header nav a { padding: 13px 4px; font-size: .78rem; border-bottom: 1px solid var(--line); }
+  header nav a:last-child { border-bottom: 0; }
+  .top-moving-tab { font-size: .62rem; line-height: 1.45; padding: 8px 16px; }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 28px;
+    padding: 56px 22px 64px;
+  }
+  .hero-copy { order: 1; }
+  .hero-side { order: 2; width: 100%; }
+  .hero h1 { font-size: clamp(3rem, 15vw, 5.2rem); line-height: .94; }
+  .hero-text { font-size: .95rem; line-height: 1.7; }
+  .actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .actions .button { width: 100%; min-height: 48px; justify-content: center; }
+  .profile-frame { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+  .profile-photo { width: 100%; height: 100%; object-fit: cover; }
+  .section, .roadmap-inner, .method-banner, .health-inner { padding-left: 22px; padding-right: 22px; }
+  .section-head { gap: 16px; }
+  .library-bento, .homepage .library-bento { grid-template-columns: 1fr; }
+  .homepage .library-grid { grid-template-columns: 1fr; }
+  .homepage .roadmap-list { padding-left: 22px; }
+  .homepage .roadmap-list article { grid-template-columns: 1fr 20px; gap: 8px; padding: 18px 10px; }
+  .homepage .roadmap-list article b { grid-column: 1 / -1; }
+  .homepage .roadmap-list article h3, .homepage .roadmap-list article p { grid-column: 1; }
+  .homepage .roadmap-list article span { grid-column: 2; grid-row: 2 / span 2; }
+  .homepage .roadmap-list:before { left: 3px; }
+  .homepage .roadmap-list article:before { left: -25px; }
+  .course-page .course-shell { display: block; }
+  .course-page .module-list { grid-template-columns: 1fr; }
+  .course-page .roadmap-definitions { grid-template-columns: 1fr; }
+  .course-page .roadmap-guide { padding-left: 22px; padding-right: 22px; }
+  .course-page .lesson-lab { width: 100%; }
+  .course-page .lesson-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+}
+
+@media (max-width: 480px) {
+  header { padding: 0 14px; }
+  header .brand { font-size: .78rem; letter-spacing: .11em; }
+  #menu { width: 40px; height: 40px; flex-basis: 40px; }
+  .top-moving-tab { font-size: .56rem; padding: 7px 12px; }
+  .hero { padding: 40px 16px 48px; gap: 24px; }
+  .hero h1 { font-size: clamp(2.65rem, 16vw, 4.2rem); }
+  .hero-intro-copy { font-size: .72rem; line-height: 1.5; }
+  .hero-text { font-size: .88rem; }
+  .actions .button { font-size: .68rem; }
+  .section, .roadmap-inner, .method-banner, .health-inner { padding-left: 16px; padding-right: 16px; }
+  .profile-frame { border-radius: 10px; }
+  .course-page .lesson-lab { padding: 18px 14px; }
+  .course-page .lesson-tabs { margin-left: -14px; margin-right: -14px; padding-left: 14px; padding-right: 14px; }
+  .course-page .roadmap-definitions { gap: 10px; background: transparent; border: 0; }
+  .course-page .roadmap-definitions article { border: 1px solid var(--line); }
+  table { display: block; width: 100%; overflow-x: auto; }
+  pre, code { max-width: 100%; overflow-x: auto; }
+}
