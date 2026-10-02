@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; upgrade-insecure-requests">
   <title>SifwakuLab | Free Learning & Open Source Hub</title>
   <meta name="description" content="A curated discovery hub for free courses, open books, datasets, developer tools, GitHub projects and practical learning resources.">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/resources.css">
 </head>
 <body class="homepage resources-page">
   <div class="top-moving-tab"><span>SIFFWAKULAB / FREE LEARNING · OPEN SOURCE · DATA · PROJECTS</span></div>
@@ -43,24 +43,24 @@
       </aside>
     </section>
 
-    <section class="section resource-section" id="courses">
+    <section class="resource-finder" aria-labelledby="resource-finder-title"><div class="section-head"><div><p class="eyebrow">QUICK FIND</p><h2 id="resource-finder-title">Where would you like to start?</h2></div><p>Search courses, datasets, tools, books, research and hands-on ideas across the hub.</p></div><div class="resource-controls" id="resource-controls" hidden><div class="resource-control-field"><label for="resource-search">Search resources</label><input id="resource-search" type="search" placeholder="Try Python, data, research…" autocomplete="off"></div><div class="resource-control-field"><label for="resource-category">Filter by topic</label><select id="resource-category"><option value="all">All topics</option><option value="courses">Courses &amp; learning</option><option value="open-source">Open source</option><option value="data">Data &amp; datasets</option><option value="tools">Tools</option><option value="projects">Projects</option><option value="books">Books</option><option value="research">Research</option><option value="opportunities">Opportunities</option></select></div><button class="resource-clear" id="resource-clear" type="button">Clear filters</button><p class="resource-results" id="resource-results" role="status" aria-live="polite"></p></div><nav class="resource-shortcuts" aria-label="Browse resource sections"><a href="#courses">Courses</a><a href="#github">Open source</a><a href="#data">Data</a><a href="#hands-on">Projects</a><a href="#research">Research</a><a href="#opportunities">Opportunities</a><a href="#toolbox">Tools</a><a href="#books">Books</a></nav></section><section class="section resource-section" id="courses" data-resource-category="courses">
       <div class="section-head">
         <div><p class="eyebrow">01 / LEARN</p><h2>Free courses worth knowing.</h2></div>
         <p>Start with structured learning before jumping between random tutorials.</p>
       </div>
       <div class="resource-grid">
         <article class="resource-card feature"><span class="resource-type">DATA SCIENCE</span><h3>Kaggle Learn</h3><p>Short, practical courses in Python, pandas, data visualization, SQL, machine learning, AI and more. Kaggle states its courses are provided at no cost.</p><a href="https://www.kaggle.com/learn" target="_blank" rel="noreferrer">Open Kaggle Learn ↗</a></article>
-        <article class="resource-card"><span class="resource-type">CODING</span><h3>freeCodeCamp</h3><p>Free, self-paced programming and computer science curriculum with interactive coding challenges and certifications.</p><a href="https://www.freecodecamp.org/learn/" target="_blank" rel="noreferrer">Start learning ↗</a></article>
+        <article class="resource-card" id="coding"><span class="resource-type">CODING</span><h3>freeCodeCamp</h3><p>Free, self-paced programming and computer science curriculum with interactive coding challenges and certifications.</p><a href="https://www.freecodecamp.org/learn/" target="_blank" rel="noreferrer">Start learning ↗</a></article>
         <article class="resource-card"><span class="resource-type">COMPUTER SCIENCE</span><h3>CS50</h3><p>Harvard's famous introduction to computer science and programming, with lectures, problem sets and projects.</p><a href="https://cs50.harvard.edu/x/" target="_blank" rel="noreferrer">Open CS50 ↗</a></article>
         <article class="resource-card"><span class="resource-type">UNIVERSITY</span><h3>MIT OpenCourseWare</h3><p>Free course materials from MIT, including lecture notes, assignments, exams and selected video lectures.</p><a href="https://ocw.mit.edu/" target="_blank" rel="noreferrer">Browse MIT OCW ↗</a></article>
         <article class="resource-card"><span class="resource-type">TECH</span><h3>Microsoft Learn</h3><p>Free learning paths and modules covering data, cloud, GitHub, Azure, Power Platform, security and development.</p><a href="https://learn.microsoft.com/training/" target="_blank" rel="noreferrer">Open Microsoft Learn ↗</a></article>
         <article class="resource-card"><span class="resource-type">GITHUB</span><h3>GitHub Skills</h3><p>Interactive GitHub courses with hands-on exercises and automated feedback. Learn Git, GitHub, Pages, Actions and collaboration.</p><a href="https://skills.github.com/" target="_blank" rel="noreferrer">Open GitHub Skills ↗</a></article>
         <article class="resource-card"><span class="resource-type">MACHINE LEARNING</span><h3>fast.ai</h3><p>Practical deep learning education designed around building real models and understanding the work by doing it.</p><a href="https://course.fast.ai/" target="_blank" rel="noreferrer">Open fast.ai ↗</a></article>
-        <article class="resource-card"><span class="resource-type">NETWORKING</span><h3>Cisco Networking Academy</h3><p>Networking, cybersecurity, programming and digital skills courses from Cisco's learning platform.</p><a href="https://www.netacad.com/" target="_blank" rel="noreferrer">Explore NetAcad ↗</a></article>
+        <article class="resource-card" id="cyber"><span class="resource-type">NETWORKING</span><h3>Cisco Networking Academy</h3><p>Networking, cybersecurity, programming and digital skills courses from Cisco's learning platform.</p><a href="https://www.netacad.com/" target="_blank" rel="noreferrer">Explore NetAcad ↗</a></article>
       </div>
     </section>
 
-    <section class="resource-dark" id="github">
+    <section class="resource-dark" id="github" data-resource-category="open-source">
       <div class="resource-dark-inner">
         <div class="section-head">
           <div><p class="eyebrow">02 / GITHUB</p><h2>Don't only use GitHub. <i>Study it.</i></h2></div>
@@ -73,7 +73,7 @@
           <article><span>DATA SCIENCE</span><h3>Data Science for Beginners</h3><p>Microsoft's structured beginner curriculum covering the data science journey with lessons and projects.</p><a href="https://github.com/microsoft/Data-Science-For-Beginners" target="_blank" rel="noreferrer">Study the repo ↗</a></article>
           <article><span>MACHINE LEARNING</span><h3>ML for Beginners</h3><p>A Microsoft curriculum with lessons and quizzes introducing classic machine learning concepts.</p><a href="https://github.com/microsoft/ML-For-Beginners" target="_blank" rel="noreferrer">Open the curriculum ↗</a></article>
           <article><span>ML ENGINEERING</span><h3>Made With ML</h3><p>A practical guide to developing, deploying and iterating on production-grade machine learning applications.</p><a href="https://github.com/GokuMohandas/Made-With-ML" target="_blank" rel="noreferrer">Study the workflow ↗</a></article>
-          <article><span>AI</span><h3>LLMs from scratch</h3><p>Learn how large language models work by implementing the core ideas step by step in code.</p><a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noreferrer">Study the code ↗</a></article>
+          <article id="ai"><span>AI</span><h3>LLMs from scratch</h3><p>Learn how large language models work by implementing the core ideas step by step in code.</p><a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" rel="noreferrer">Study the code ↗</a></article>
           <article><span>APIs</span><h3>Public APIs</h3><p>A community-maintained list of public APIs for building experiments, applications and data projects.</p><a href="https://github.com/public-apis/public-apis" target="_blank" rel="noreferrer">Find an API ↗</a></article>
         </div>
       </div>
@@ -118,18 +118,18 @@
 <a href="#baking"><b>BAKING SCIENCE</b><span>Recipe → variables → measurements → batch comparison.</span>↗</a>
 <a href="#children"><b>CHILDREN'S PROJECTS</b><span>Play, build, draw, measure, explain and share.</span>↗</a>
 </div></section>
-<section class="section resource-section" id="children"><div class="section-head"><div><p class="eyebrow">CHILDREN'S MAKER CORNER</p><h2>Make learning <i>playable.</i></h2></div><p>Safe, age-appropriate project ideas that turn ordinary materials and free software into learning experiences.</p></div>
+<section class="section resource-section" id="children" data-resource-category="projects"><div class="section-head"><div><p class="eyebrow">CHILDREN'S MAKER CORNER</p><h2>Make learning <i>playable.</i></h2></div><p>Safe, age-appropriate project ideas that turn ordinary materials and free software into learning experiences.</p></div>
 <div class="resource-grid compact">
 <article class="resource-card"><span class="resource-type">COMPUTING</span><h3>Scratch Game Lab</h3><p>Build a simple game, change one rule, test it and explain the logic behind the result.</p><a href="https://scratch.mit.edu/" target="_blank" rel="noreferrer">Build with Scratch ↗</a></article>
-<article class="resource-card"><span class="resource-type">SCIENCE</span><h3>PhET Experiment Lab</h3><p>Change one variable in an interactive simulation and record what happens.</p><a href="https://phet.colorado.edu/" target="_blank" rel="noreferrer">Run a simulation ↗</a></article>
+<article class="resource-card" id="science"><span class="resource-type">SCIENCE</span><h3>PhET Experiment Lab</h3><p>Change one variable in an interactive simulation and record what happens.</p><a href="https://phet.colorado.edu/" target="_blank" rel="noreferrer">Run a simulation ↗</a></article>
 <article class="resource-card"><span class="resource-type">COMPUTATIONAL THINKING</span><h3>CS Unplugged</h3><p>Use paper, cards and physical activities to explore algorithms and computing ideas.</p><a href="https://www.csunplugged.org/" target="_blank" rel="noreferrer">Try activities ↗</a></article>
 <article class="resource-card"><span class="resource-type">MAKING</span><h3>Tinkercad</h3><p>Explore beginner-friendly 3D design, circuits and coding in the browser.</p><a href="https://www.tinkercad.com/" target="_blank" rel="noreferrer">Make something ↗</a></article>
 </div></section>
-<section class="resource-dark" id="baking"><div class="resource-dark-inner"><div class="section-head"><div><p class="eyebrow">BAKING LAB</p><h2>Physics, chemistry, maths and business in a <i>single bun.</i></h2></div><p>Baking gives learners a real system they can observe and measure.</p></div><div class="repo-grid">
+<section class="resource-dark" id="baking" data-resource-category="projects"><div class="resource-dark-inner"><div class="section-head"><div><p class="eyebrow">BAKING LAB</p><h2>Physics, chemistry, maths and business in a <i>single bun.</i></h2></div><p>Baking gives learners a real system they can observe and measure.</p></div><div class="repo-grid">
 <article><span>PHYSICS</span><h3>Heat transfer</h3><p>Compare oven temperature and baking time. Record internal and final mass or other safe measurements.</p><a href="https://asbe.org/article/baking/" target="_blank" rel="noreferrer">Read baking science ↗</a></article>
 <article><span>CHEMISTRY</span><h3>Yeast &amp; gas</h3><p>Investigate fermentation and carbon dioxide production by comparing controlled dough conditions.</p><a href="https://edu.rsc.org/experiments/yeast-and-the-expansion-of-bread-dough/1748.article" target="_blank" rel="noreferrer">Explore experiment ↗</a></article>
 <article><span>MATHEMATICS</span><h3>Recipe ratios</h3><p>Convert recipes by baker's percentage, scale batch sizes and calculate yield.</p><a href="#data">Turn it into data ↗</a></article>
-<article><span>BUSINESS</span><h3>Cost per bun</h3><p>Measure ingredient cost, energy assumptions, packaging and yield to estimate unit cost.</p><a href="#business">Build the model ↗</a></article>
+<article id="business"><span>BUSINESS</span><h3>Cost per bun</h3><p>Measure ingredient cost, energy assumptions, packaging and yield to estimate unit cost.</p><a href="#data">Turn the estimate into a data project ↗</a></article>
 </div></div></section><section class="section resource-section" id="master-map">
 <div class="section-head"><div><p class="eyebrow">THE OPEN LEARNING MAP</p><h2>One website. <i>Thousands of ways to learn.</i></h2></div><p>SifwakuLab is being built as a map of the free and open internet: courses, books, datasets, simulations, documentation, software, communities, projects and opportunities.</p></div>
 <div class="master-grid">
@@ -144,16 +144,16 @@
 <a href="#opportunities"><b>09</b><strong>OPPORTUNITIES</strong><span>Challenges, hackathons and open-source contribution.</span></a>
 <a href="#toolbox"><b>10</b><strong>TOOLS</strong><span>Free software and web tools for getting work done.</span></a>
 <a href="#books"><b>11</b><strong>BOOKS</strong><span>Open textbooks and technical reading.</span></a>
-<a href="#projects"><b>12</b><strong>PROJECTS</strong><span>Turn concepts into visible evidence of skill.</span></a>
+<a href="#hands-on"><b>12</b><strong>PROJECTS</strong><span>Turn concepts into visible evidence of skill.</span></a>
 </div></section>
 <section class="resource-dark" id="mega-categories"><div class="resource-dark-inner"><div class="section-head"><div><p class="eyebrow">WHAT CAN YOU LEARN?</p><h2>More than a course <i>catalogue.</i></h2></div><p>The hub can grow across school subjects, university subjects, professional skills and practical life.</p></div>
 <div class="repo-grid mega"><article><span>STEM</span><h3>Mathematics · Physics · Chemistry · Biology · Statistics</h3><p>Concepts, simulations, experiments and problem solving.</p></article><article><span>COMPUTING</span><h3>Programming · Data · AI · Web · Networks · Cybersecurity</h3><p>Learn concepts and immediately build with them.</p></article><article><span>HUMAN SKILLS</span><h3>Writing · Communication · Critical Thinking · Research</h3><p>Skills that support every technical and professional field.</p></article><article><span>REAL LIFE</span><h3>Cooking · Baking · Farming · Finance · Business · Repair</h3><p>Use everyday systems as laboratories for learning.</p></article></div></div></section>
-<section class="section resource-section" id="toolbox">
+<section class="section resource-section" id="toolbox" data-resource-category="tools">
 <div class="section-head"><div><p class="eyebrow">THE FREE TOOLBOX</p><h2>Software is part of <i>the curriculum.</i></h2></div><p>A serious learning hub should teach people what tools exist, what they are for and how to use them responsibly.</p></div>
 <div class="tool-matrix">
 <a href="https://www.python.org/" target="_blank" rel="noreferrer"><b>Python</b><span>Programming &amp; data</span></a><a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"><b>VS Code</b><span>Code editor</span></a><a href="https://jupyter.org/" target="_blank" rel="noreferrer"><b>Jupyter</b><span>Notebooks</span></a><a href="https://www.r-project.org/" target="_blank" rel="noreferrer"><b>R</b><span>Statistics</span></a><a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"><b>PostgreSQL</b><span>Database</span></a><a href="https://duckdb.org/" target="_blank" rel="noreferrer"><b>DuckDB</b><span>Analytics</span></a><a href="https://www.libreoffice.org/" target="_blank" rel="noreferrer"><b>LibreOffice</b><span>Office &amp; spreadsheets</span></a><a href="https://www.gimp.org/" target="_blank" rel="noreferrer"><b>GIMP</b><span>Image editing</span></a><a href="https://inkscape.org/" target="_blank" rel="noreferrer"><b>Inkscape</b><span>Vector graphics</span></a><a href="https://www.audacityteam.org/" target="_blank" rel="noreferrer"><b>Audacity</b><span>Audio</span></a><a href="https://obsproject.com/" target="_blank" rel="noreferrer"><b>OBS Studio</b><span>Screen recording</span></a><a href="https://www.blender.org/" target="_blank" rel="noreferrer"><b>Blender</b><span>3D &amp; animation</span></a><a href="https://git-scm.com/" target="_blank" rel="noreferrer"><b>Git</b><span>Version control</span></a><a href="https://www.raspberrypi.org/" target="_blank" rel="noreferrer"><b>Raspberry Pi</b><span>Computing projects</span></a><a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"><b>Arduino</b><span>Physical computing</span></a><a href="https://www.gnu.org/software/octave/" target="_blank" rel="noreferrer"><b>GNU Octave</b><span>Numerical computing</span></a>
 </div></section>
-<section class="section resource-section" id="books">
+<section class="section resource-section" id="books" data-resource-category="books">
 <div class="section-head"><div><p class="eyebrow">OPEN READING ROOM</p><h2>Books without <i>the price barrier.</i></h2></div><p>Open educational resources can turn the hub into a long-term personal library.</p></div>
 <div class="resource-grid compact"><article class="resource-card"><span class="resource-type">OPEN TEXTBOOKS</span><h3>OpenStax</h3><p>Free, peer-reviewed textbooks across science, mathematics, computing and other subjects.</p><a href="https://openstax.org/" target="_blank" rel="noreferrer">Read OpenStax ↗</a></article><article class="resource-card"><span class="resource-type">BOOKS</span><h3>Open Textbook Library</h3><p>Free and openly licensed textbooks that can be read online or downloaded.</p><a href="https://open.umn.edu/opentextbooks/" target="_blank" rel="noreferrer">Browse textbooks ↗</a></article><article class="resource-card"><span class="resource-type">COMPUTING</span><h3>Python for Everybody</h3><p>Free learning materials built around learning Python through practical examples.</p><a href="https://www.py4e.com/" target="_blank" rel="noreferrer">Learn Python ↗</a></article><article class="resource-card"><span class="resource-type">DOCUMENTATION</span><h3>MDN Web Docs</h3><p>A major open web-development reference for HTML, CSS and JavaScript.</p><a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer">Study the web ↗</a></article></div></section>
 <section class="section resource-section" id="project-engine">
@@ -171,7 +171,7 @@
 <a href="stem-children.html"><b>STEM FOR CHILDREN</b><span>Free STEM activities and maker resources.</span>↗</a>
 </div></section><section class="section resource-section" id="learning-systems"><div class="section-head"><div><p class="eyebrow">05 / LEARNING FOR REAL PEOPLE</p><h2>Different learners need <i>different paths.</i></h2></div><p>SifwakuLab should work for children, adults, beginners, self-taught learners and people who need accessible or offline-friendly study.</p></div><div class="track-grid"><a href="accessibility.html"><b>ACCESSIBLE LEARNING</b><span>Low vision, visual load, reading, hearing, motor and focus-friendly strategies.</span>↗</a><a href="offline-learning.html"><b>OFFLINE LEARNING</b><span>Build a legal personal library for low-connectivity environments.</span>↗</a><a href="life-skills.html"><b>LIFE SKILLS</b><span>Money, food, communication, digital safety and everyday systems.</span>↗</a><a href="stem-children.html"><b>CHILDREN</b><span>Playful STEM, coding, experiments and making.</span>↗</a><a href="theory-to-practice.html"><b>THEORY → PRACTICE</b><span>A common method across every subject.</span>↗</a><a href="library.html"><b>READING COMPANIONS</b><span>Pair lessons with legal free books and open texts.</span>↗</a></div></section><section class="section resource-section" id="tracks">
       <div class="section-head">
-        <div><p class="eyebrow">05 / LEARNING TRACKS</p><h2>Choose a direction. <i>Then build.</i></h2></div>
+        <div><p class="eyebrow">06 / LEARNING TRACKS</p><h2>Choose a direction. <i>Then build.</i></h2></div>
         <p>Use these tracks to move from curiosity to a practical skill instead of collecting random links.</p>
       </div>
       <div class="track-grid">
@@ -184,10 +184,10 @@
       </div>
     </section>
 
-    <section class="resource-dark hidden-gems" id="hidden-gems">
+    <section class="resource-dark hidden-gems" id="hidden-gems" data-resource-category="courses">
       <div class="resource-dark-inner">
         <div class="section-head">
-          <div><p class="eyebrow">06 / HIDDEN GEMS</p><h2>Less famous. <i>Still powerful.</i></h2></div>
+          <div><p class="eyebrow">07 / HIDDEN GEMS</p><h2>Less famous. <i>Still powerful.</i></h2></div>
           <p>These are the kinds of resources people often discover late. SifwakuLab puts them on the map earlier.</p>
         </div>
         <div class="repo-grid">
@@ -203,9 +203,9 @@
       </div>
     </section>
 
-    <section class="section resource-section" id="data">
+    <section class="section resource-section" id="data" data-resource-category="data">
       <div class="section-head">
-        <div><p class="eyebrow">07 / BUILD WITH DATA</p><h2>From dataset to <i>portfolio evidence.</i></h2></div>
+        <div><p class="eyebrow">08 / BUILD WITH DATA</p><h2>From dataset to <i>portfolio evidence.</i></h2></div>
         <p>Don't download a dataset just to make a chart. Find a question, document the method and publish the result.</p>
       </div>
       <div class="resource-grid compact">
@@ -216,9 +216,9 @@
       </div>
     </section>
 
-    <section class="section resource-section" id="research">
+    <section class="section resource-section" id="research" data-resource-category="research">
       <div class="section-head">
-        <div><p class="eyebrow">08 / RESEARCH DESK</p><h2>Learn to <i>find evidence.</i></h2></div>
+        <div><p class="eyebrow">09 / RESEARCH DESK</p><h2>Learn to <i>find evidence.</i></h2></div>
         <p>A researcher's toolbox for discovering papers, understanding evidence and making your own work reproducible.</p>
       </div>
       <div class="resource-grid compact">
@@ -229,9 +229,9 @@
       </div>
     </section>
 
-    <section class="section resource-section" id="opportunities">
+    <section class="section resource-section" id="opportunities" data-resource-category="opportunities">
       <div class="section-head">
-        <div><p class="eyebrow">09 / OPPORTUNITIES</p><h2>Don't just learn. <i>Participate.</i></h2></div>
+        <div><p class="eyebrow">10 / OPPORTUNITIES</p><h2>Don't just learn. <i>Participate.</i></h2></div>
         <p>Places where learning can become practice, contribution, competition or public work.</p>
       </div>
       <div class="opportunity-list">
@@ -244,7 +244,7 @@
 
     <section class="section resource-section" id="principles">
       <div class="resource-callout">
-        <p class="eyebrow">10 / HOW TO USE THIS HUB</p>
+        <p class="eyebrow">11 / HOW TO USE THIS HUB</p>
         <h2>Don't collect links. <i>Build a learning trail.</i></h2>
         <div class="trail"><span>01 Choose one topic</span><span>02 Pick one source</span><span>03 Build one project</span><span>04 Document one result</span><span>05 Teach or share it</span></div>
       </div>
@@ -257,6 +257,6 @@
     </section>
   </main>
   <footer><b>SIFWAKU LAB</b><span>Evidence · Experiments · Analysis · Research</span><small>© 2026 Gift Sifwaku</small></footer>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script><script src="assets/js/resource-search.js"></script>
 </body>
 </html>
