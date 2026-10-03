@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075ca8">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; frame-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; upgrade-insecure-requests">
+  <title>PDF Studio | SifwakuLab</title>
+  <meta name="description" content="Combine PDFs and photos, put every page in the order you want, and create a PDF privately in your browser.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/resources.css">
+  <link rel="stylesheet" href="assets/css/pdf-tools.css">
+</head>
+<body class="homepage resources-page pdf-tools-page">
+  <div class="top-moving-tab"><span>SIFWAKULAB / PDF STUDIO · ARRANGE · COMBINE · DOWNLOAD</span></div>
+  <header>
+    <a class="brand" href="index.html">SIFWAKU<span>LAB</span></a>
+    <button id="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="resources.html" class="active">Learn</a>
+      <a href="course3.html">Projects</a>
+      <a href="course.html">Method</a>
+      <a href="library.html">Library</a>
+      <a href="resources.html#toolbox">Tools</a>
+    </nav>
+    <a class="header-cta" href="resources.html">Explore Free ↗</a>
+  </header>
+
+  <main class="pdf-shell">
+    <section class="pdf-hero">
+      <div>
+        <p class="eyebrow">A PRIVATE, IN-BROWSER TOOL</p>
+        <h1>Put every page <i>in its place.</i></h1>
+        <p>Add PDFs and photos, arrange the pages in the order you want, then save one clean PDF. Your documents stay on this device while you work.</p>
+        <div class="pdf-hero-actions">
+          <a class="pdf-primary-link" href="#pdf-workspace">Open PDF Studio ↓</a>
+          <a class="pdf-secondary-link" href="resources.html">Back to learning resources ↗</a>
+        </div>
+      </div>
+      <aside class="pdf-hero-note">
+        <b>PDF + PHOTOS</b>
+        <p>Mix documents and JPG, PNG or WebP photos. Move pages one by one, remove extras and download the finished file.</p>
+      </aside>
+    </section>
+
+    <section class="pdf-workspace" id="pdf-workspace" aria-labelledby="workspace-title">
+      <div class="pdf-workspace-heading">
+        <div><p class="eyebrow">YOUR DOCUMENT WORKSPACE</p><h2 id="workspace-title">Build one PDF, your way.</h2></div>
+        <span class="local-badge"><span aria-hidden="true">●</span> Files stay on this device</span>
+      </div>
+
+      <label class="pdf-dropzone" id="dropzone" for="file-input">
+        <input class="visually-hidden-input" id="file-input" type="file" accept="application/pdf,.pdf,image/jpeg,image/png,image/webp" multiple>
+        <span class="dropzone-icon" aria-hidden="true">＋</span>
+        <span class="dropzone-title">Choose PDFs or photos</span>
+        <span class="dropzone-hint">or drag files here · PDF, JPG, PNG and WebP</span>
+        <span class="dropzone-button">Add files</span>
+      </label>
+
+      <p class="pdf-safety-note">Files are processed in your browser and are not uploaded. The workspace supports up to 40 MB per file, 120 MB total and 500 pages. Password-protected PDFs must be unlocked first. Keep your originals: combining may not preserve signatures, bookmarks or interactive form behavior.</p>
+
+      <div class="pdf-status" id="pdf-status" role="status" aria-live="polite">Add at least one PDF or photo to begin.</div>
+
+      <div class="pdf-queue-heading">
+        <div><h3>Pages in your new PDF</h3><span id="page-count" class="page-count">0 pages</span></div>
+        <button class="clear-button" id="clear-button" type="button" disabled>Clear all</button>
+      </div>
+
+      <div class="empty-queue" id="empty-queue">
+        <span aria-hidden="true">▤</span>
+        <p>Your pages will appear here. Add more files at any time, then move pages up or down to set the final order.</p>
+      </div>
+      <ol class="pdf-page-list" id="page-list" aria-label="Pages in output order"></ol>
+
+      <form class="pdf-output-panel" id="output-form">
+        <div class="output-name-field">
+          <label for="output-name">Name your finished PDF</label>
+          <input id="output-name" type="text" value="sifwaku-combined.pdf" maxlength="100" autocomplete="off">
+        </div>
+        <div class="output-actions">
+          <button class="create-button" id="create-button" type="submit" disabled>Create my PDF</button>
+          <a class="download-button" id="download-link" hidden>Download PDF</a>
+        </div>
+      </form>
+      <p class="pdf-library-credit">PDF processing runs locally with <a href="assets/vendor/pdf-lib-LICENSE.md">pdf-lib · MIT license</a>.</p>
+    </section>
+  </main>
+
+  <footer><b>SIFWAKU LAB</b><span>Evidence · Experiments · Analysis · Research</span><small>© 2026 Gift Sifwaku</small></footer>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/vendor/pdf-lib-1.17.1.min.js"></script>
+  <script defer src="assets/js/pdf-tools.js"></script>
+</body>
+</html>
