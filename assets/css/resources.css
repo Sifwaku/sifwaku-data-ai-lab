@@ -169,3 +169,7 @@
 :root[data-theme="dim"] .resources-page .team-invite p:last-child{
   color:var(--ink);
 }
+
+.team-invite .eyebrow{
+  color:#d4e9f5;
+}
