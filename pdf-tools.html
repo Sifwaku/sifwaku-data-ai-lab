@@ -65,7 +65,11 @@
 
       <div class="pdf-queue-heading">
         <div><h3>Pages in your new PDF</h3><span id="page-count" class="page-count">0 pages</span></div>
-        <button class="clear-button" id="clear-button" type="button" disabled>Clear all</button>
+        <div class="queue-actions" aria-label="Workspace actions">
+          <button class="history-button" id="undo-button" type="button" disabled>Undo</button>
+          <button class="history-button" id="redo-button" type="button" disabled>Redo</button>
+          <button class="clear-button" id="clear-button" type="button" disabled>Clear all</button>
+        </div>
       </div>
 
       <div class="empty-queue" id="empty-queue">
@@ -84,8 +88,18 @@
           <a class="download-button" id="download-link" hidden>Download PDF</a>
         </div>
       </form>
-      <p class="pdf-library-credit">PDF processing runs locally with <a href="assets/vendor/pdf-lib-LICENSE.md">pdf-lib · MIT license</a>.</p>
+      <p class="pdf-library-credit">PDF processing and previews run on this device with <a href="assets/vendor/pdf-lib-LICENSE.md">pdf-lib · MIT license</a> and <a href="assets/vendor/pdfjs-6.3.289/pdfjs-6.3.289-LICENSE.md">PDF.js · Apache-2.0 license</a>.</p>
     </section>
+
+    <dialog class="pdf-preview-dialog" id="preview-dialog" aria-labelledby="preview-title">
+      <div class="preview-dialog-header">
+        <div><p class="eyebrow">PAGE PREVIEW</p><h3 id="preview-title">Output page</h3><p id="preview-detail"></p></div>
+        <button class="preview-close" id="preview-close" type="button" aria-label="Close page preview">×</button>
+      </div>
+      <div class="preview-stage" id="preview-stage">
+        <p class="preview-status" id="preview-status" role="status" aria-live="polite"></p>
+      </div>
+    </dialog>
   </main>
 
   <footer><b>SIFWAKU LAB</b><span>Evidence · Experiments · Analysis · Research</span><small>© 2026 Gift Sifwaku</small></footer>
