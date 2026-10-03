@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075ca8">
+  <title>Start Here | SifwakuLab Learning Paths</title>
+  <meta name="description" content="Choose a beginner-friendly path in Data and AI, Web Development, or Research and Science. Follow weekly steps and finish with a project you can show.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/resources.css">
+  <style>
+    .pathway-page{--paper:#f6f9fc;--ink:#122b4a;--muted:#5b6f86;--line:#d6e1ed;--green:#075ca8;--ochre:#ef6b4f;--dark:#0b3156;background:var(--paper);color:var(--ink)}
+    .pathway-hub{max-width:var(--max);margin:0 auto;padding:0 22px 60px}
+    .pathway-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,.42fr);gap:36px;align-items:end;padding:68px 0 52px}
+    .pathway-hero h1{max-width:790px;margin:15px 0 18px;font:600 clamp(3rem,7vw,6.3rem)/.94 var(--serif);letter-spacing:-.055em}
+    .pathway-hero h1 i,.pathway-section h2 i{color:var(--ochre)}
+    .pathway-hero>div>p:not(.eyebrow){max-width:650px;color:var(--muted);font-size:1rem;line-height:1.65}
+    .pathway-note{padding:22px 24px;border:1px solid var(--line);background:#fff}
+    .pathway-note strong{font:500 .65rem var(--mono);letter-spacing:.08em;color:var(--green)}
+    .pathway-note p{margin:10px 0 0;color:var(--muted);font-size:.83rem;line-height:1.6}
+    .pathway-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .pathway-actions a,.pathway-card-link{display:inline-flex;align-items:center;min-height:44px;padding:11px 15px;border:1px solid var(--green);background:var(--green);color:#fff;font:500 .66rem var(--mono);text-decoration:none}
+    .pathway-actions a.secondary{background:transparent;color:var(--green)}
+    .pathway-section{padding:44px 0;border-top:1px solid var(--line);scroll-margin-top:80px}
+    .pathway-section h2{margin:10px 0 12px;font:600 clamp(2rem,4vw,3.6rem)/1 var(--serif);letter-spacing:-.04em}
+    .pathway-intro{max-width:760px;color:var(--muted);line-height:1.65}
+    .pathway-choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:25px}
+    .pathway-choice{display:flex;flex-direction:column;min-height:225px;padding:22px;border:1px solid var(--line);background:#fff;color:var(--ink);text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+    .pathway-choice:hover{transform:translateY(-3px);border-color:var(--green)}
+    .pathway-choice span{color:var(--green);font:500 .6rem var(--mono);letter-spacing:.08em}
+    .pathway-choice h3{margin:15px 0 8px;font:600 1.45rem/1.1 var(--serif)}
+    .pathway-choice p{margin:0 0 18px;color:var(--muted);font-size:.8rem;line-height:1.55}
+    .pathway-choice b{margin-top:auto;color:var(--green);font:500 .62rem var(--mono)}
+    .pathway-how{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:25px;border:1px solid var(--line);background:var(--line)}
+    .pathway-how article{padding:16px;background:#fff}
+    .pathway-how b{display:block;color:var(--green);font:500 .58rem var(--mono);letter-spacing:.06em}
+    .pathway-how p{margin:8px 0 0;color:var(--muted);font-size:.76rem;line-height:1.5}
+    .track{margin:30px 0 0;padding:25px;border:1px solid var(--line);background:#fff;scroll-margin-top:85px}
+    .track-heading{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start;padding-bottom:22px;border-bottom:1px solid var(--line)}
+    .track-heading h3{margin:8px 0;font:600 clamp(1.7rem,3vw,2.7rem)/1 var(--serif)}
+    .track-heading p{max-width:700px;margin:0;color:var(--muted);font-size:.84rem;line-height:1.6}
+    .track-badge{padding:9px 11px;border:1px solid var(--line);color:var(--green);font:500 .57rem var(--mono);white-space:nowrap}
+    .track-outcome{margin:22px 0;padding:18px 20px;background:var(--dark);color:#fff}
+    .track-outcome b{color:#9bc7ed;font:500 .59rem var(--mono);letter-spacing:.08em}
+    .track-outcome p{margin:8px 0 0;color:#fff;font-size:.84rem;line-height:1.6}
+    .week-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none;counter-reset:week}
+    .week-card{position:relative;padding:16px 17px 17px 54px;border:1px solid var(--line);counter-increment:week}
+    .week-card:before{content:counter(week,decimal-leading-zero);position:absolute;top:17px;left:16px;color:var(--green);font:500 .65rem var(--mono)}
+    .week-card h4{margin:0 0 6px;font:600 1rem/1.2 var(--serif)}
+    .week-card p{margin:0;color:var(--muted);font-size:.76rem;line-height:1.55}
+    .week-card a{display:inline-block;margin-top:9px;color:var(--green);font:500 .59rem var(--mono);text-decoration:underline;text-underline-offset:3px}
+    .track-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center;margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+    .track-footer p{max-width:650px;margin:0;color:var(--muted);font-size:.75rem;line-height:1.5}
+    .pathway-closer{margin-top:44px;padding:30px;background:#e9f2f9;border:1px solid var(--line)}
+    .pathway-closer h2{margin:8px 0;font:600 clamp(1.8rem,3vw,2.7rem)/1 var(--serif)}
+    .pathway-closer p{max-width:700px;color:var(--muted);font-size:.86rem;line-height:1.6}
+    :root[data-theme="dim"] .pathway-page{--paper:#101a1d;--ink:#ebf3f2;--muted:#a7b9b4;--line:#2a3b3e;--green:#7acbbd;--ochre:#f0bb5d;--dark:#0b1418;background:var(--paper);color:var(--ink)}
+    :root[data-theme="dim"] .pathway-note,:root[data-theme="dim"] .pathway-choice,:root[data-theme="dim"] .track,:root[data-theme="dim"] .pathway-how article{background:#162427;color:var(--ink);border-color:var(--line)}
+    :root[data-theme="dim"] .week-card{border-color:var(--line)}
+    :root[data-theme="dim"] .pathway-closer{background:#162427;border-color:var(--line)}
+    @media(max-width:800px){.pathway-hero{grid-template-columns:1fr;gap:22px;padding-top:48px}.pathway-choices{grid-template-columns:1fr}.pathway-choice{min-height:0}.pathway-how{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.pathway-hub{padding-right:16px;padding-left:16px}.pathway-hero h1{font-size:3.15rem}.pathway-how,.week-list{grid-template-columns:1fr}.track{padding:17px}.track-heading{grid-template-columns:1fr}.track-badge{justify-self:start}}
+  </style>
+</head>
+<body class="homepage resources-page pathway-page">
+  <div class="top-moving-tab"><span>SIFWAKULAB / START HERE · LEARN · BUILD · SHARE</span></div>
+  <header>
+    <a class="brand" href="index.html">SIFWAKU<span>LAB</span></a>
+    <button id="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav">☰</button>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="resources.html">Learn</a><a href="course3.html">Projects</a><a href="course.html">Method</a><a href="library.html">Library</a><a href="resources.html#hidden-gems">Resources</a>
+    </nav>
+    <a class="header-cta" href="resources.html">Explore Free ↗</a>
+  </header>
+  <main class="pathway-hub">
+    <section class="pathway-hero">
+      <div><p class="eyebrow">THE FIRST STEP / YOUR LEARNING PLAN</p><h1>Choose one goal.<br>Build skill you can <i>show.</i></h1><p>Pick a path and follow one clear action each week. Learn from free resources, practise as you go, and finish with a project you can explain and share.</p><div class="pathway-actions"><a href="#choose-path">Choose your path ↓</a><a class="secondary" href="resources.html">Explore all resources ↗</a></div></div>
+      <aside class="pathway-note"><strong>MAKE IT FIT YOUR LIFE</strong><p>Each path is designed for about eight weeks at three to five hours a week. Use the pace that works for you. You can start with a phone, browser and internet connection; free notebook tools are included where useful.</p></aside>
+    </section>
+    <section class="pathway-section" id="choose-path">
+      <p class="eyebrow">01 / PICK A DIRECTION</p><h2>What would you like to <i>make?</i></h2><p class="pathway-intro">All three paths begin at beginner level. Choose the one that interests you most. You can switch later or combine skills after finishing a project.</p>
+      <div class="pathway-choices">
+        <a class="pathway-choice" href="#data-ai"><span>PATH 01 / DATA & AI</span><h3>Find a question in data.</h3><p>Learn Python, explore a dataset, build a simple model and explain what the result means.</p><b>Finish with a documented data project ↘</b></a>
+        <a class="pathway-choice" href="#web-development"><span>PATH 02 / WEB DEVELOPMENT</span><h3>Build something for the web.</h3><p>Learn HTML, CSS, JavaScript and Git, then publish an accessible site of your own.</p><b>Finish with a live website ↘</b></a>
+        <a class="pathway-choice" href="#research-science"><span>PATH 03 / RESEARCH & SCIENCE</span><h3>Investigate a real question.</h3><p>Find evidence, make a fair comparison, analyse results and write a clear mini-study.</p><b>Finish with a reproducible research brief ↘</b></a>
+      </div>
+      <div class="pathway-how" aria-label="How each path works"><article><b>LEARN</b><p>Use one short lesson or reference for the week's skill.</p></article><article><b>DO</b><p>Apply it immediately to a small part of your project.</p></article><article><b>SAVE PROOF</b><p>Keep a notebook, sketch, link, chart or short note.</p></article><article><b>REFLECT</b><p>Write what worked, what did not and what comes next.</p></article></div>
+    </section>
+    <section class="pathway-section" id="data-ai">
+      <p class="eyebrow">PATH 01 / DATA & AI</p><h2>From first notebook to <i>data project.</i></h2><p class="pathway-intro">Learn to ask a useful question, work with data and explain a result. No previous coding experience required.</p>
+      <article class="track"><div class="track-heading"><div><h3>Your eight-week route</h3><p>Use Google Colab or Kaggle Notebooks so you can practise in a browser. Keep one notebook as your project journal.</p></div><span class="track-badge">BEGINNER · 3–5 HRS/WEEK</span></div>
+        <div class="track-outcome"><b>FINISH LINE</b><p>Publish a notebook with one clear question, a cited dataset, a chart or model, a plain-language result, limitations and a next step.</p></div>
+        <ol class="week-list">
+          <li class="week-card"><h4>Set up and learn Python basics</h4><p>Open a notebook, run code cells and practise variables, lists, conditions and loops. Save three small examples.</p><a href="https://www.kaggle.com/learn/python" target="_blank" rel="noreferrer">Start Kaggle's Python lessons ↗</a></li>
+          <li class="week-card"><h4>Load and inspect a dataset</h4><p>Read a CSV, inspect columns and types, count missing values and write down what each row represents.</p><a href="https://www.kaggle.com/learn/pandas" target="_blank" rel="noreferrer">Practise with pandas ↗</a></li>
+          <li class="week-card"><h4>Choose a question and data</h4><p>Pick a question you can answer with available columns. Record the dataset name, source, date and licence or reuse terms.</p><a href="https://ourworldindata.org/" target="_blank" rel="noreferrer">Explore open global data ↗</a></li>
+          <li class="week-card"><h4>Clean and describe the data</h4><p>Check duplicates, missing values and unusual records. Calculate simple counts, averages or percentages that relate to your question.</p><a href="https://www.kaggle.com/learn/data-cleaning" target="_blank" rel="noreferrer">Learn data cleaning ↗</a></li>
+          <li class="week-card"><h4>Make a chart that answers something</h4><p>Choose a chart that fits your question, label it clearly and write two sentences describing what it shows.</p><a href="https://www.kaggle.com/learn/data-visualization" target="_blank" rel="noreferrer">Learn data visualization ↗</a></li>
+          <li class="week-card"><h4>Build a simple baseline model</h4><p>Try one beginner model, keep some data aside for validation and compare your result with a simple baseline.</p><a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank" rel="noreferrer">Start machine learning ↗</a></li>
+          <li class="week-card"><h4>Check the result and its limits</h4><p>Change one thing at a time. Check for leakage, explain uncertainty and record what your data cannot tell you.</p><a href="https://www.kaggle.com/docs/competitions" target="_blank" rel="noreferrer">Understand evaluation and rules ↗</a></li>
+          <li class="week-card"><h4>Publish a clear project story</h4><p>Add a title, question, source, method, result, limitations and next step. Make sure someone else can run your notebook.</p><a href="https://www.kaggle.com/competitions/titanic/code" target="_blank" rel="noreferrer">Study example notebooks ↗</a></li>
+        </ol>
+        <div class="track-footer"><p><b>Project idea:</b> Explore a trend in health, education, climate or public services using a public dataset. Share the evidence, not just the model score.</p><a class="pathway-card-link" href="resources.html#data">Find data resources ↗</a></div>
+      </article>
+    </section>
+    <section class="pathway-section" id="web-development">
+      <p class="eyebrow">PATH 02 / WEB DEVELOPMENT</p><h2>From first page to <i>published site.</i></h2><p class="pathway-intro">Build a small, useful website from scratch. Learn how the page is structured, styled, made interactive and shared online.</p>
+      <article class="track"><div class="track-heading"><div><h3>Your eight-week route</h3><p>Work in a browser-based editor or a computer you can access. Keep each week's work in one folder and use GitHub to save versions.</p></div><span class="track-badge">BEGINNER · 3–5 HRS/WEEK</span></div>
+        <div class="track-outcome"><b>FINISH LINE</b><p>Publish a responsive, accessible website for a club, project or topic you care about, with a clear homepage, useful content and a simple portfolio write-up.</p></div>
+        <ol class="week-list">
+          <li class="week-card"><h4>Understand HTML structure</h4><p>Build a page with a title, headings, paragraphs, links, lists and images. Use headings in a logical order.</p><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content" target="_blank" rel="noreferrer">Learn HTML structure ↗</a></li>
+          <li class="week-card"><h4>Style a page with CSS</h4><p>Set colours, spacing, type and readable widths. Use a small set of design choices consistently.</p><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics" target="_blank" rel="noreferrer">Learn CSS basics ↗</a></li>
+          <li class="week-card"><h4>Make it work on a phone</h4><p>Use flexible layouts, test a narrow screen and make links and buttons easy to tap.</p><a href="https://www.theodinproject.com/paths/foundations/courses/foundations" target="_blank" rel="noreferrer">Follow a web foundations path ↗</a></li>
+          <li class="week-card"><h4>Add JavaScript fundamentals</h4><p>Practise values, functions, conditions and events. Add one small interaction with a clear purpose.</p><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/" target="_blank" rel="noreferrer">Practise JavaScript ↗</a></li>
+          <li class="week-card"><h4>Make the page accessible</h4><p>Use descriptive link text, keyboard-friendly controls, visible focus and enough contrast. Add labels to form fields.</p><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility" target="_blank" rel="noreferrer">Learn web accessibility ↗</a></li>
+          <li class="week-card"><h4>Save work with Git and GitHub</h4><p>Create a repository, add a clear README and save meaningful versions as you improve the site.</p><a href="https://skills.github.com/" target="_blank" rel="noreferrer">Practise GitHub collaboration ↗</a></li>
+          <li class="week-card"><h4>Test with real people</h4><p>Ask two people to find one piece of information. Observe where they get stuck and improve the page.</p><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noreferrer">Use the MDN learning path ↗</a></li>
+          <li class="week-card"><h4>Publish and explain it</h4><p>Deploy the site, check every link and write a short note about the audience, design choices and what you would improve next.</p><a href="https://docs.github.com/en/pages" target="_blank" rel="noreferrer">Publish with GitHub Pages ↗</a></li>
+        </ol>
+        <div class="track-footer"><p><b>Project idea:</b> Create a practical guide for a local club, class or community. Include clear contact or next-step information without publishing anyone's private details.</p><a class="pathway-card-link" href="resources.html#toolbox">Find free tools ↗</a></div>
+      </article>
+    </section>
+    <section class="pathway-section" id="research-science">
+      <p class="eyebrow">PATH 03 / RESEARCH & SCIENCE</p><h2>From curiosity to <i>evidence.</i></h2><p class="pathway-intro">Turn a question into a small, careful investigation. Practise finding trustworthy sources, recording a method and communicating what the evidence supports.</p>
+      <article class="track"><div class="track-heading"><div><h3>Your eight-week route</h3><p>Use a public dataset or an established classroom simulation. Keep the question manageable and the method safe, ethical and repeatable.</p></div><span class="track-badge">BEGINNER · 3–5 HRS/WEEK</span></div>
+        <div class="track-outcome"><b>FINISH LINE</b><p>Share a short research brief with a focused question, source notes, a repeatable method, one chart or table, a conclusion, limitations and references.</p></div>
+        <ol class="week-list">
+          <li class="week-card"><h4>Turn curiosity into one question</h4><p>Choose something observable and specific. Write what you already think, what evidence would change your mind and what you will measure.</p><a href="https://www.open.edu/openlearn/" target="_blank" rel="noreferrer">Explore OpenLearn study resources ↗</a></li>
+          <li class="week-card"><h4>Find and record reliable sources</h4><p>Read more than one source. Note author, date, evidence, possible limits and a link so you can return to it.</p><a href="https://www.semanticscholar.org/" target="_blank" rel="noreferrer">Find research papers ↗</a></li>
+          <li class="week-card"><h4>Plan a fair investigation</h4><p>Choose a public dataset or a safe simulation. Define the variables and comparison before looking for the result.</p><a href="https://phet.colorado.edu/" target="_blank" rel="noreferrer">Explore science simulations ↗</a></li>
+          <li class="week-card"><h4>Collect or select evidence carefully</h4><p>Record where the data came from, units, dates and selection choices. Avoid collecting private information about people.</p><a href="https://ourworldindata.org/" target="_blank" rel="noreferrer">Browse documented public data ↗</a></li>
+          <li class="week-card"><h4>Organize and check your observations</h4><p>Make a tidy table, check for missing or unusual values, and keep a note of any correction you make.</p><a href="https://archive.ics.uci.edu/" target="_blank" rel="noreferrer">Explore research datasets ↗</a></li>
+          <li class="week-card"><h4>Analyse and show one result</h4><p>Calculate a comparison or summary and make one labelled chart. Describe the pattern before explaining why it might exist.</p><a href="https://www.kaggle.com/learn/data-visualization" target="_blank" rel="noreferrer">Practise clear data charts ↗</a></li>
+          <li class="week-card"><h4>Discuss limits and other explanations</h4><p>Ask what could be missing, what else might explain the pattern and what conclusion would be too strong.</p><a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Check related research ↗</a></li>
+          <li class="week-card"><h4>Write and share a research brief</h4><p>Explain the question, sources, method, result, limits and references in plain language. Include enough detail for another learner to repeat your steps.</p><a href="https://www.zotero.org/" target="_blank" rel="noreferrer">Organize research references ↗</a></li>
+        </ol>
+        <div class="track-footer"><p><b>Project idea:</b> Compare a public trend across two places or time periods. Describe the evidence and limits without claiming that a simple comparison proves cause and effect.</p><a class="pathway-card-link" href="resources.html#research">Find research resources ↗</a></div>
+      </article>
+    </section>
+    <section class="pathway-closer"><p class="eyebrow">YOUR NEXT MOVE</p><h2>Start small. Finish something real.</h2><p>Choose one path, complete the first week and keep the proof. If you get stuck, use the resource hub to find another explanation, ask a teammate or change the project scope.</p><div class="pathway-actions"><a href="#choose-path">Choose a path ↑</a><a class="secondary" href="resources.html#team-up">Find learning teammates ↗</a></div></section>
+  </main>
+  <footer><b>SIFWAKU LAB</b><span>Evidence · Experiments · Analysis · Research</span><small>© 2026 Gift Sifwaku</small></footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
