@@ -139,3 +139,33 @@
     grid-column:auto;
   }
 }
+
+
+.resource-video-note{
+  max-width:72ch;
+  margin:20px 0 0;
+  padding-left:16px;
+  border-left:3px solid var(--green);
+  color:var(--muted);
+  font-size:.78rem;
+}
+.team-invite{
+  margin-top:24px;
+  padding:22px 24px;
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.06);
+}
+.team-invite p:last-child{
+  max-width:78ch;
+  margin:8px 0 0;
+  color:#fff;
+  font-size:.88rem;
+}
+:root[data-theme="dim"] .resources-page .resource-team-section .resource-card{
+  border-color:var(--line);
+  background:#162427;
+  color:var(--ink);
+}
+:root[data-theme="dim"] .resources-page .team-invite p:last-child{
+  color:var(--ink);
+}
