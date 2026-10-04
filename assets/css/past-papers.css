@@ -1,0 +1,19 @@
+.exam-hero .actions{flex-wrap:wrap}
+.exam-section{padding-top:42px}
+.exam-section .section-head h2,.exam-note h2{margin:12px 0 0;font:600 clamp(1.8rem,3vw,2.6rem)/1.05 var(--serif);letter-spacing:-.03em}
+.exam-section .section-head{margin-bottom:20px}
+.exam-section .resource-card{min-height:245px}
+.exam-section .resource-card p{max-width:58ch}
+.exam-dark{margin-top:38px}
+.exam-checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0;list-style:none}
+.exam-checklist li{display:grid;gap:8px;padding:18px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.04)}
+.exam-checklist b{font:500 .68rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#b9ddf4}
+.exam-checklist span{color:#e7eff1;line-height:1.6}
+.exam-note{max-width:var(--max);margin:0 auto;padding:54px 22px 76px}
+.exam-note h2{margin-bottom:16px}
+.exam-note p:not(.eyebrow){max-width:78ch;color:var(--muted);line-height:1.7}
+.exam-note .exam-checked{font:500 .68rem var(--mono);letter-spacing:.03em}
+.exam-back-link{display:inline-block;margin-top:12px;color:var(--green);font:500 .68rem var(--mono);text-decoration:none}
+.exam-back-link:hover{text-decoration:underline}
+@media(max-width:700px){.exam-checklist{grid-template-columns:1fr}.exam-hero .actions .button{width:100%;justify-content:center}}
+:root[data-theme="dim"] .exam-checklist li{border-color:var(--line);background:#162427}
